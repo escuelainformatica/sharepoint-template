@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+
+    <title>Titulo</title>
+</head>
+<body>
+
+<header id="escuela_header">
+    <div class="container-fluid ms-dialogHidden">
+        <div class="row">
+            ****Header******
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div data-name="TopNavigationNoFlyoutWithStartNode">
+                <!--CS: Iniciar fragmento de código Navegación superior-->
+                <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--MS:<SharePoint:AjaxDelta ID="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" runat="server">-->
+                <!--MS:<SharePoint:DelegateControl runat="server" ControlId="TopNavigationDataSource" Id="topNavigationDelegate">-->
+                <!--MS:<Template_Controls>-->
+                <!--MS:<asp:SiteMapDataSource ShowStartingNode="True" SiteMapProvider="SPNavigationProvider" ID="topSiteMap" runat="server" StartingNodeUrl="sid:1002">-->
+                <!--ME:</asp:SiteMapDataSource>--><!--ME:</Template_Controls>-->
+                <!--ME:</SharePoint:DelegateControl>--><a name="startNavigation"></a>
+                <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">-->
+                <!--MS:<SharePoint:AspMenu ID="TopNavigationMenu" runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="&lt;%$Resources:wss,navigation_accesskey%&gt;" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" AdjustForShowStartingNode="false" MaximumDynamicDisplayLevels="0" SkipLinkText="">-->
+                <!--ME:</SharePoint:AspMenu>--><!--ME:</asp:ContentPlaceHolder>--><!--ME:</SharePoint:AjaxDelta>-->
+                <!--CE: Fin del fragmento de código Navegación superior-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="myActualContent">
+        <div class="col-3 ms-dialogHidden">
+            <div data-name="QuickLaunch"><!--CS: Iniciar fragmento de código Navegación vertical-->
+                <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--SPM:<%@Register Tagprefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+                    <!--MS:<SharePoint:AjaxDelta ID="DeltaPlaceHolderLeftNavBar" BlockElement="true" CssClass="ms-core-navigation" runat="server">-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBar" runat="server">-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarTop" runat="server">-->
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchTop" runat="server">-->
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderLeftNavBarDataSource" runat="server">-->
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderCalendarNavigator" runat="server">-->
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderLeftActions" runat="server">-->
+                    <!--ME:</asp:ContentPlaceHolder>-->
+                    <!--MS:<SharePoint:SPNavigationManager ID="QuickLaunchNavigationManager" runat="server" QuickLaunchControlId="v4QuickLaunchMenu" ContainedControl="QuickLaunch" EnableViewState="false">-->
+                    <!--MS:<SharePoint:DelegateControl runat="server" ControlId="QuickLaunchDataSource">-->
+                    <!--MS:<Template_Controls>-->
+                    <!--MS:<PublishingNavigation:PortalSiteMapDataSource runat="server" ID="SiteMapDS" SiteMapProvider="CurrentNavigation" EnableViewState="false" StartFromCurrentNode="true" ShowStartingNode="false" TrimNonCurrentTypes="Heading">-->
+                    <!--ME:</PublishingNavigation:PortalSiteMapDataSource>--><!--ME:</Template_Controls>-->
+                    <!--ME:</SharePoint:DelegateControl>-->
+                    <!--MS:<SharePoint:AspMenu ID="V4QuickLaunchMenu" runat="server" EnableViewState="false" DataSourceId="QuickLaunchSiteMap" UseSimpleRendering="true" Orientation="Vertical" StaticDisplayLevels="3" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="0" SkipLinkText="">-->
+                    <!--ME:</SharePoint:AspMenu>--><!--ME:</SharePoint:SPNavigationManager>-->
+                    <!--MS:<SharePoint:SPNavigationManager ID="TreeViewNavigationManagerV4" runat="server" ContainedControl="TreeView" CssClass="ms-tv-box">-->
+                    <!--MS:<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/{0}/viewlsts.aspx" ID="idNavLinkSiteHierarchyV4" Text="&lt;%$Resources:wss,treeview_header%&gt;" accesskey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-tv-header">-->
+                    <!--ME:</SharePoint:SPLinkButton>-->
+                    <!--MS:<SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">-->
+                    <!--MS:<Template_Controls>-->
+                    <!--MS:<SharePoint:SPHierarchyDataSourceControl runat="server" ID="TreeViewDataSourceV4" RootContextObject="Web" IncludeDiscussionFolders="true">-->
+                    <!--ME:</SharePoint:SPHierarchyDataSourceControl>-->
+                    <!--MS:<SharePoint:SPRememberScroll runat="server" ID="TreeViewRememberScrollV4" onscroll="javascript:_spRecordScrollPositions(this);" style="overflow: auto;">-->
+                    <!--MS:<SharePoint:SPTreeView ID="WebTreeViewV4" runat="server" ShowLines="false" DataSourceId="TreeViewDataSourceV4" ExpandDepth="0" SelectedNodeStyle-CssClass="ms-tv-selected" NodeStyle-CssClass="ms-tv-item" SkipLinkText="" NodeIndent="12" ExpandImageUrl="/{0}/images/tvclosed.png" ExpandImageUrlRtl="/{0}/images/tvclosedrtl.png" CollapseImageUrl="/{0}/images/tvopen.png" CollapseImageUrlRtl="/{0}/images/tvopenrtl.png" NoExpandImageUrl="/{0}/images/tvblank.gif">-->
+                    <!--ME:</SharePoint:SPTreeView>--><!--ME:</SharePoint:SPRememberScroll>-->
+                    <!--ME:</Template_Controls>--><!--ME:</SharePoint:DelegateControl>-->
+                    <!--ME:</SharePoint:SPNavigationManager>-->
+                    <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderQuickLaunchBottom" runat="server">-->
+                    <hr/>
+                    <!--MS:<SharePoint:ClusteredSPLinkButton ID="idNavLinkViewAllV4" runat="server" Permissions="ViewFormPages" NavigateUrl="~site/{0}/viewlsts.aspx" Text="&lt;%$Resources:wss,quiklnch_allcontent_short%&gt;" accesskey="&lt;%$Resources:wss,quiklnch_allcontent_AK%&gt;" CssClass="ms-core-listMenu-item">-->
+                    <!--ME:</SharePoint:ClusteredSPLinkButton>--><!--ME:</asp:ContentPlaceHolder>-->
+                    <!--ME:</asp:ContentPlaceHolder>--><!--ME:</SharePoint:AjaxDelta>--></div>
+                <!--CE: Fin del fragmento de código Navegación vertical-->
+            </div>
+        </div>
+        <div class="col-8">
+            <div data-name="EditModePanelShowInRead">
+                <!--CS: Iniciar fragmento de código Panel del modo Edición-->
+                <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--MS:<Publishing:EditModePanel runat="server" PageDisplayMode="Display">-->
+                <div class="DefaultContentBlock" style="border:medium black solid; background:yellow; color:black; margin:20px; padding:10px;">
+                    Debe reemplazar este div por el contenido que se represente según las propiedades de su panel del modo de edición.
+
+                </div>
+                <!--ME:</Publishing:EditModePanel>-->
+                <!--CE: Fin del fragmento de código Panel del modo Edición-->
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+<footer id="escuela_footer">
+    <div class="container-fluid ms-dialogHidden">
+        <div class="row">
+            *****footer****
+        </div>
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+</html>
