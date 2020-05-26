@@ -1,7 +1,7 @@
 # sharepoint-template
 Template HTML para SharePoint 365
 
-Ejercicio de creacion de una pagina maestra para SharePoint 365   
+Ejercicio de de clase en la creacion de una pagina maestra para SharePoint 365   
 
 Es solo un ejemplo y es necesario configurar los estilos de Bootstrap para hacerlo coexistir con SharePoint.  
 
